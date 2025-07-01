@@ -1,0 +1,246 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+  border-bottom: 1px solid #600;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: url('Archivos/fondo-vampiro.jpg') no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px red;
+}
+
+.hero p {
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+button#enterBtn {
+  background-color: #900;
+  border: none;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button#enterBtn:hover {
+  background-color: #c00;
+}
+
+/* Secciones */
+section {
+  padding: 4rem 2rem;
+  border-top: 1px solid #333;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  border-top: 1px solid #600;
+}
+
+
+.member-profile {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.member-profile h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.bio h3 {
+  color: #c00;
+  margin-top: 2rem;
+}
+
+.bio p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #c00;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #900;
+}
+
+.members-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.members-grid a {
+    background-color: #111;
+    border: 1px solid #c00;
+    padding: 1rem 2rem;
+    color:#fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.members-grid a:hover {
+    background-color: #900;
+}
+
+blockquote {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.quote-author {
+  margin-top: 0.5rem;
+  color: #999;
+}
+
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --accent-color:#c00;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/*Claro*/
+body.light-mode {
+    --bg-color: #f4f4f4;
+    --text-color: #111;
+    --accent-color: #900;
+}
+
+#themeToggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #900;
+}
+
+/* Lightbox modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9%);
+    text-align: center;
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}

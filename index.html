@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHYPEN Fan Web</title>
+    <link rel="stylesheet" href="Enhypen.css"/>
+</head>
+<body>
+    <header> 
+        <h1>ENHYPEN</h1>
+        <nav>
+            <a href="#members">Members</a> 
+            <a href="#discography">Discography</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+        <button id="themeToggle">🌓</button>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>SHOUT OUT LOUDER</h2>
+        <p>MY LIFE IS THE VERY NIGHT</p>
+        <button id="enterBtn">ENTER</button>
+    </section>
+
+    <section id="members">
+        <h2 class="fade-in">Members</h2>
+          <div class="members-grid">
+            <a href="Members/Heeseung.html">Heeseung</a>
+            <a href="Members/Jay.html">Jay</a>
+            <a href="Members/Jake.html">Jake</a>
+            <a href="Members/Sunghoon.html">Sunghoon</a>
+            <a href="Members/Sunoo.html">Sunoo</a>
+            <a href="Members/Jungwon.html">Jungwon</a>
+            <a href="Members/Ni-ki.html">Ni-Ki</a>
+          </div>
+    </section>
+
+    <section id="discography">
+        <h2 class="fade-in">Discography</h2>
+        <p>Pronto agregaremos álbumes destacados.</p>
+    </section>
+
+    <section id="gallery">
+        <h2 class="fade-in">Gallery</h2>
+        <div class="gallery-grid">
+            <img src="Archivos/wanted poster.jpg" alt="Wanted Poster"/>
+            <img src="Archivos/1st win trophy for 'bad desire'.jpg" alt="[K-MEDIA PHOTO] Enhypen with their 1st win trophy for 'Bad Desire'"/>
+            <img src="Archivos/enhypen at coachella.jpg" alt="Enhypen at Coachella 2025 Weekend 2"/>
+        </div>
+
+        <!-- Modal para ampliar imagenes-->
+         <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img"/>
+         </div>
+    </section>
+
+    <section class="fade-in">
+        <h2>Now Playing</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0q3zClOVaZA?utm_source=generator&theme=0" 
+        width="100%" height="352" frameBorder="0" allowfullscreen="" 
+         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <p>Made with love by byf1nd</p>
+    </footer>
+
+    <script src="Enhypen.js"></script>
+    
+</body>
+</html>
