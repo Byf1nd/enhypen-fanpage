@@ -42,3 +42,24 @@ lightbox.addEventListener("click", e => {
     lightbox.style.display = "none";
   }
 });
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  loader.classList.add("fade-out");
+});
+
+let secretCombo = [];
+const secretKey = ['e', 'n', 'g'];
+
+window.addEventListener("keydown", (e) => {
+  secretCombo.push(e.key.toLowerCase());
+
+  if (secretCombo.length > secretKey.length) {
+    secretCombo.shift();
+  }
+
+  if (secretCombo,join('') === secretKey.join('')) {
+    document.body.classList.toggle("bloodmoon-mode");
+    alert("🌕 Modo Blood Moon activado!");
+  }
+});
