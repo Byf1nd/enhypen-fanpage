@@ -48,18 +48,60 @@ window.addEventListener("load", () => {
   loader.classList.add("fade-out");
 });
 
-let secretCombo = [];
-const secretKey = ['e', 'n', 'g'];
-
 window.addEventListener("keydown", (e) => {
-  secretCombo.push(e.key.toLowerCase());
-
-  if (secretCombo.length > secretKey.length) {
-    secretCombo.shift();
-  }
-
-  if (secretCombo,join('') === secretKey.join('')) {
+  if (e.key === "-") {
     document.body.classList.toggle("bloodmoon-mode");
-    alert("🌕 Modo Blood Moon activado!");
+    alert("🌕 Blood Moon mode toggled!");
+    
+    const bloodmoonQuotes = [
+      "If you're reading this, it means you hear even in silence.",
+      "Not all shadows are empty. Some carry memories.",
+      "The night reveals what the light hides.",
+      "You're not lost—you’re just walking through your next era.",
+      "You were chosen to remember what others forgot."
+    ];
+
+    const quoteEl = document.getElementById("bloodmoon-quote");
+    if (quoteEl) {
+      const randomIndex = Math.floor(Math.random() * bloodmoonQuotes.length);
+      quoteEl.textContent = bloodmoonQuotes[randomIndex];
+    }
+
+    const bloodmoonAudio = document.getElementById("bloodmoon-audio");
+    if (bloodmoonAudio) {
+      bloodmoonAudio.currentTime = 0;
+      bloodmoonAudio.play();
+    }
+
+    const glitch = document.getElementById("glitch-overlay");
+    if (glitch) {
+      glitch.style.opacity = "1";
+      setTimeout(() => {
+        glitch.style.opacity = "0";
+      }, 300);
+    }
   }
 });
+
+document.getElementById("bloodmoon-button").addEventListener("click", () => {
+  document.body.classList.toggle("bloodmoon-mode");
+
+  // Repetimos sonido y glitch si se activa por botón
+  if (bloodmoonAudio) {
+    bloodmoonAudio.currentTime = 0;
+    bloodmoonAudio.play();
+  }
+  if (glitch) {
+    glitch.style.opacity = "1";
+    setTimeout(() => {
+      glitch.style.opacity = "0";
+    }, 300);
+  }
+
+  // Frase aleatoria
+  if (quoteEl) {
+    const randomIndex = Math.floor(Math.random() * bloodmoonQuotes.length);
+    quoteEl.textContent = bloodmoonQuotes[randomIndex];
+  }
+});
+
