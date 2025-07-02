@@ -283,7 +283,7 @@ body.light-mode {
 }
 
 .album img {
-  width: 80%;
+  width: 100%;
   max-height: 220px;
   object-fit: cover;
   border-radius: 10px;
@@ -312,4 +312,45 @@ body.bloodmoon-mode a {
 
 body.bloodmoon-mode .album {
   background-color: #400;
+}
+
+#bloodmoon-secret {
+  background: #1a0000;
+  color: #ffcccc;
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 2px dashed crimson;
+  border-radius: 12px;
+  box-shadow: 0 0 20px crimson;
+  display: none;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.bloodmoon-mode #bloodmoon-secret {
+  display: block;
+}
+
+.secret-content blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #f66;
+}
+
+.secret-content .whisper {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
